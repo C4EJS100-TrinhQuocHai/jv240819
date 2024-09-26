@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // khai báo 1 đối tượng sinh viên
+        // Cách 1: 
+        let student = {
+            name: "nguyễn văn a",
+            age: 20,
+            id: 115,
+            say: () => {
+                console.log("xin chào!");
+            }
+        }
+        // console.log("gọi hàm:", student.say());
+
+
+        // đối tượng sẽ có thuộc tính và phương thức
+        // Cách 2: 
+        // let student = new Object();
+        // Cách 3: 
+
+        // let cake1={
+        //     color:"red",
+        //     address:"hà đông"
+        // }
+        // let cake2={
+        //     color:"green",
+        //     address:"hồ tây"
+        // }
+        // dùng hàm tạo constructor để tạo khuân
+        function Cake(a, color, address) {
+
+            this.name11111 = a;
+            this.color1 = color;
+            this.address1 = address;
+            this.sales=()=>{
+
+            }
+        }
+        let cake1 = new Cake("bánh trung thu vị dừa", "red", "hồ tây");
+        let cake2 = new Cake("bánh trung thu vị cốm", "blue", "mỹ đình");
+
+        console.log("cake1", cake1);
+        console.log("cake2", cake2);
+
+        // C4: dùng class ES6 2015
+        class Employee {
+            constructor(name, age, id) {
+                this.name = name;
+                this.age = age;
+                this.id = id;
+            }
+            // nơi khai báo phương thức
+            study(){
+                console.log("phương thức study");
+                
+            }
+            // typescript, nestjs 
+        }
+        let employee1 = new Employee("hoa", 15, 116);
+        console.log("employee1", employee1);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

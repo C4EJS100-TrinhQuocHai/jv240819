@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            name: "Minh Thu",
+            age: 20,
+            id: 1,
+        }
+        // console.log(student.name);
+        // CRUD với thuộc tính 
+        student.address = "Hà Nội";
+        // console.log("student", student);
+        // C: Create thêm mới
+        // R: Read
+        for (const keyName1 in student) {
+            console.log("keyName", student[keyName1]);
+        }
+        // U: Update
+        student.name = "Minh Hà!"
+        // D: Delete
+        delete student.id;
+        console.log("student", student);
+
+        /* 
+            Các cách clone object js
+            destructoring object : Reactjs()
+
+         */
+        let obj1={
+            name:"hoa"
+        }
+        let obj2=obj1;
+
+        obj1.name="hà"
+
+    </script>
+</body>
+
+</html>
