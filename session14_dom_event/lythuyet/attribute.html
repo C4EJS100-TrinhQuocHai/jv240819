@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .param {
+            color: red;
+        }
+
+        #test {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="job" placeholder="mời bạn nhập nội dung công việc">
+    <button onclick="addTodo()">add</button>
+    <ul id="jobs">
+
+
+
+    </ul>
+    <p onclick="handleClick()"> xin chào </p>
+    <script>
+        document.getElementsByTagName("p")[0].className = "param";
+        document.getElementsByTagName("p")[0].id = "test";
+        let obj = {
+            name: "hoa"
+        }
+        obj.age = 25;
+        console.log(1111, obj);
+
+        function handleClick() {
+
+
+
+        }
+        // function add todo
+        let jobs = [];
+        function addTodo() {
+            // lấy giá trị người dùng nhập!
+            let name = document.getElementById("job").value;
+            console.log("name", name);
+            jobs.push(name);
+            rederJob();
+
+        }
+        // function hiển thị
+        function rederJob() {
+            let text = "";
+            for (let i = 0; i < jobs.length; i++) {
+                text +=
+                    `
+                         <li>${jobs[i]}</li>
+                    `
+            }
+            document.getElementById("jobs").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
